@@ -5,18 +5,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+      # and run all Cypress tests by using
       # https://github.com/cypress-io/github-action
-      - name: Cypress component tests
-        uses: cypress-io/github-action@v4
-        with:
-          component: true
-
-      - name: Cypress e2e tests
-        uses: cypress-io/github-action@v4
-        with:
-          install: false
-          start: npm start
-          wait-on: 'http://localhost:3000'
+      #
+      # Need to run:
+      #  - component tests (fast)
+      #  - e2e tests (don't forget to start the application)
