@@ -10,6 +10,42 @@ Original Sudoku game copied from [https://github.com/raravi/sudoku](https://gith
 
 ![Sudoku application running locally](./images/app.png)
 
+## Requirements
+
+You need Node v14+ installed on your local machine. You can check by running:
+
+```
+$ node -v
+v16.14.0
+$ npm -v
+8.11.0
+```
+
+Clone the repository to your local machine and install its dependencies
+
+```
+$ git clone git@github.com:bahmutov/sudoku-app-base.git
+$ cd sudoku-app-base
+$ npm install
+```
+
+Check the application starts, and verify the application works at the URL `localhost:3000`
+
+```
+$ npm start
+$ open localhost:3000
+```
+
+Check if Cypress opens
+
+```
+$ npx cypress open
+```
+
+If you see the dialog below, you are good to go!
+
+![Cypress opens](./images/opens.png)
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2022
