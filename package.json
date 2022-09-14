@@ -1,0 +1,46 @@
+{
+  "name": "sudoku-app-base",
+  "description": "Example Sudoku React application used for \"Testing for Good\" Cypress workshop",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "4.17.21",
+    "moment": "2.29.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "cy:open": "cypress open",
+    "cy:e2e": "cypress open --e2e --browser electron",
+    "comp": "cypress open --component --browser electron",
+    "dev": "start-server-and-test 3000 cy:open",
+    "e2e": "start-server-and-test 3000 cy:e2e",
+    "badges": "npx -p dependency-version-badge update-badge cypress"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cypress": "^10.8.0",
+    "prettier": "2.7.1",
+    "start-server-and-test": "^1.14.0"
+  }
+}
