@@ -46,6 +46,18 @@ If you see the dialog below, you are good to go!
 
 ![Cypress opens](./images/opens.png)
 
+## Topics
+
+This workshop "End-to-End & Component Testing Using Cypress" covers the following topics:
+
+- installing Cypress and setting up a testing project
+- writing your first full end-to-end test
+- controlling the time in your application to make the tests fast
+- writing your first React component test
+- running Cypress tests on CI using GitHub Actions
+
+The workshop should take 2-3 hours following the instructor's lead.
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2022
