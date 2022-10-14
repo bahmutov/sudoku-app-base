@@ -1,4 +1,4 @@
-# sudoku-app-base [![CI](https://github.com/bahmutov/sudoku-app-base/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bahmutov/sudoku-app-base/actions/workflows/ci.yml) ![cypress version](https://img.shields.io/badge/cypress-10.8.0-brightgreen)
+# sudoku-app-base [![CI](https://github.com/bahmutov/sudoku-app-base/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bahmutov/sudoku-app-base/actions/workflows/ci.yml) ![cypress version](https://img.shields.io/badge/cypress-10.10.0-brightgreen)
 
 > Example Sudoku React application used for "Testing for Good" Cypress workshop
 
