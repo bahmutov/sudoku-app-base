@@ -13,7 +13,14 @@ jobs:
       # Need to run:
       #  - component tests (fast)
       #  - e2e tests (don't forget to start the application)
-      - name: Cypress run
+      - name: Component tests
         uses: cypress-io/github-action@v4
         with:
           component: true
+
+      - name: E2E tests
+        uses: cypress-io/github-action@v4
+        with:
+          install: false
+          start: npm start
+          wait-on: 'http://localhost:3000'
