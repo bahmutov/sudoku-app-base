@@ -1,7 +1,7 @@
 name: CI
 on: [push]
 jobs:
-  cypress-run:
+  all-tests:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout

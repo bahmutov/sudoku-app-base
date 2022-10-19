@@ -1,14 +1,11 @@
 /// <reference types="cypress" />
 describe('Timer', () => {
-  it('shows 10 seconds', () => {
+  it.only('shows 10 seconds', () => {
     // visit the base url
     // https://on.cypress.io/visit
+    cy.clock()
     cy.visit('/')
-    // check that the timer shows every second from 1 to 10
-    // https://on.cypress.io/contains
-    for (let k = 0; k < 10; k++) {
-      cy.contains('.status__time', `00:0${k}`)
-    }
+    // cy.tick(60_000)
   })
 
   // confirm the timer shows "00:30" after 30 seconds

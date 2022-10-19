@@ -17,8 +17,15 @@ describe('Difficulty', () => {
     )
     // act on the component's UI
     // change the difficulty to Medium
+    cy.get('select').select('Medium')
     // confirm the stub "@change" was called once
     // with expected argument
     // https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html
+    cy.get('@change')
+      .should('have.been.calledOnce')
+      .then(console.log)
+      .its('firstCall.args.0.target.value')
+      .then(console.log)
+      .should('equal', 'Medium')
   })
 })

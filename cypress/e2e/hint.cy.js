@@ -3,11 +3,11 @@ describe('Hint', () => {
   it('fills each empty cell', () => {
     // visit the base URL
     cy.visit('/')
-    cy.get('.game__cell.game__cell--filled').should('have.length', 45)
-    cy.get('.game__cell')
-      .not('.game__cell--filled')
+    cy.get('.game__cell--filled').should('have.length', 45)
+    cy.get('.game__cell:not(.game__cell--filled)')
+      .should('have.length', 36)
       .each(($cell) => {
-        cy.wrap($cell).click()
+        cy.wrap($cell, { log: false }).click({ log: false })
         cy.get('.status__action-hint').click()
       })
 
