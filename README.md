@@ -63,6 +63,7 @@ This workshop "End-to-End & Component Testing Using Cypress" covers the followin
   - numbers component spec
   - difficulty component spec
   - overlay component spec with network stubbing
+  - status section component test with screenshots
 - running Cypress tests on CI using GitHub Actions
 
 The workshop should take 2-3 hours following the instructor's lead.
