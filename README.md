@@ -64,7 +64,10 @@ This workshop "End-to-End & Component Testing Using Cypress" covers the followin
   - difficulty component spec
   - overlay component spec with network stubbing
   - status section component test with screenshots
+  - the Game component vs play E2E test
+  - https://slides.com/bahmutov/the-fuzzy-line
 - running Cypress tests on CI using GitHub Actions
+- https://slides.com/bahmutov/test-components-without-fear
 
 The workshop should take 2-3 hours following the instructor's lead.
 

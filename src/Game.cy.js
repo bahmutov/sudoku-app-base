@@ -8,23 +8,16 @@ import { starting, solved } from '../cypress/fixtures/sudoku.json'
 
 describe('Game', () => {
   it('plays the game', () => {
+    // mount the component with the starting and solved arrays
     cy.mount(
       <SudokuProvider>
-        <WinProvider>
-          <Game initArray={starting} solvedArray={solved} />
-        </WinProvider>
+        <WinProvider></WinProvider>
       </SudokuProvider>,
     )
-    cy.get('.game__cell:not(.game__cell--filled)').should('have.length', 3)
-    starting.forEach((cell, index) => {
-      if (cell === '0') {
-        cy.get('.game__cell').eq(index).click()
-        cy.contains('.status__number', solved[index])
-          .click()
-          .wait(500, { log: false })
-      }
-    })
-
-    cy.contains('.overlay__text', 'You solved it').should('be.visible')
+    // there should be three unfilled cells
+    // take every unfilled cell in the array and fill it
+    // with the solution
+    //
+    // then the overlay "You solved it" should be visible
   })
 })

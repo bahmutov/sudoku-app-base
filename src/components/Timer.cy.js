@@ -11,21 +11,13 @@ describe('Timer', () => {
     const now = moment()
     const future = now.clone().add(700, 'seconds')
     // set the application clock into the future
-    cy.clock(future.toDate())
 
     // mount the Timer
     // surrounded by the context provider with
     // value={{ timeGameStarted: now }}
     // and a section with class "status"
-    cy.mount(
-      <SudokuContext.Provider value={{ timeGameStarted: now }}>
-        <section className="status">
-          <Timer />
-        </section>
-      </SudokuContext.Provider>,
-    )
+    //
     // confirm the timer shows "11:40"
-    cy.contains('11:40')
   })
 
   it('formats the time', { viewportHeight: 200, viewportWidth: 300 }, () => {

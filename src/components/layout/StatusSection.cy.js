@@ -24,8 +24,5 @@ describe('StatusSection', () => {
     // take the page screenshot
     // change the viewport to 290x500 pixels
     // and take the screenshot again
-    cy.screenshot('StatusSection - 1', { overwrite: true })
-    cy.viewport(290, 500)
-    cy.screenshot('StatusSection - 2', { overwrite: true })
   })
 })

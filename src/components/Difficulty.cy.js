@@ -20,12 +20,5 @@ describe('Difficulty', () => {
     // confirm the stub "@change" was called once
     // with expected argument
     // https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html
-    cy.get('select').should('have.value', 'Easy').select('Medium')
-    cy.get('select').should('have.value', 'Medium')
-    cy.get('@change')
-      .should('have.been.calledOnce')
-      .its('firstCall.args.0.target.value')
-      .then(console.log)
-      .should('equal', 'Medium')
   })
 })
