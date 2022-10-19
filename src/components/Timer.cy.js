@@ -2,15 +2,21 @@
 import React from 'react'
 import { Timer, formatTime } from './Timer'
 import '../App.css'
-import { SudokuProvider, SudokuContext } from '../context/SudokuContext'
+import { SudokuContext } from '../context/SudokuContext'
 import moment from 'moment'
 
 describe('Timer', () => {
   it('sets the clock to the given value', () => {
+    // get the current clock and compute 700 seconds into the future
     const now = moment()
     const future = now.clone().add(700, 'seconds')
+    // set the application clock into the future
     cy.clock(future.toDate())
 
+    // mount the Timer
+    // surrounded by the context provider with
+    // value={{ timeGameStarted: now }}
+    // and a section with class "status"
     cy.mount(
       <SudokuContext.Provider value={{ timeGameStarted: now }}>
         <section className="status">
@@ -18,6 +24,7 @@ describe('Timer', () => {
         </section>
       </SudokuContext.Provider>,
     )
+    // confirm the timer shows "11:40"
     cy.contains('11:40')
   })
 

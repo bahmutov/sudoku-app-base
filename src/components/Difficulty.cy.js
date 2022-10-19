@@ -15,6 +15,11 @@ describe('Difficulty', () => {
         </div>
       </SudokuContext.Provider>,
     )
+    // act on the component's UI
+    // change the difficulty to Medium
+    // confirm the stub "@change" was called once
+    // with expected argument
+    // https://glebbahmutov.com/cypress-examples/commands/spies-stubs-clocks.html
     cy.get('select').should('have.value', 'Easy').select('Medium')
     cy.get('select').should('have.value', 'Medium')
     cy.get('@change')

@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 describe('Hint', () => {
   it('fills each empty cell', () => {
+    // visit the base URL
     cy.visit('/')
     cy.get('.game__cell.game__cell--filled').should('have.length', 45)
     cy.get('.game__cell')

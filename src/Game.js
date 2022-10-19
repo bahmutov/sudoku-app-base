@@ -11,7 +11,7 @@ import { useWinContext } from './context/WinContext'
 /**
  * Game is the main React component.
  */
-export const Game = () => {
+export const Game = (props) => {
   /**
    * All the variables for holding state:
    * gameArray: Holds the current state of the game.
@@ -54,10 +54,16 @@ export const Game = () => {
    * Creates a new game and initializes the state variables.
    */
   function _createNewGame(e) {
-    const [temporaryInitArray, temporarySolvedArray] =
-      window.starting && window.solved
-        ? [window.starting, window.solved]
-        : getUniqueSudoku(difficulty, e)
+    let temporaryInitArray, temporarySolvedArray
+    temporaryInitArray = props.initArray
+    temporarySolvedArray = props.solvedArray
+
+    if (!temporaryInitArray) {
+      ;[temporaryInitArray, temporarySolvedArray] =
+        window.starting && window.solved
+          ? [window.starting, window.solved]
+          : getUniqueSudoku(difficulty, e)
+    }
 
     setInitArray(temporaryInitArray)
     setGameArray(temporaryInitArray)
