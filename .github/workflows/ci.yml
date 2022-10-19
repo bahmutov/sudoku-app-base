@@ -13,3 +13,7 @@ jobs:
       # Need to run:
       #  - component tests (fast)
       #  - e2e tests (don't forget to start the application)
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          component: true
